@@ -1,0 +1,153 @@
+{
+  "main": {
+    "id": "33db9bdd268c7c58",
+    "type": "split",
+    "children": [
+      {
+        "id": "7d1ba60310de4764",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b8d990c51387f603",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Leetcode/链表/2022-11-03 两两交换链表节点.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "22aa40bf1bdcb320",
+    "type": "split",
+    "children": [
+      {
+        "id": "f5c6e0f0afbeca7d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e644f209a85e6a73",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "851c952c3ca388fd",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8ba026450f896595",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 293
+  },
+  "right": {
+    "id": "17e470ce41c58c98",
+    "type": "split",
+    "children": [
+      {
+        "id": "976cdc5d8ddfea1a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "709b17d0b9041ad3",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Leetcode/链表/2022-11-03 两两交换链表节点.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b4681e8d9e8b60c3",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Leetcode/链表/2022-11-03 两两交换链表节点.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "053af99309afe18f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": false
+              }
+            }
+          },
+          {
+            "id": "444b1c442ebc6498",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Leetcode/链表/2022-11-03 两两交换链表节点.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "b8d990c51387f603",
+  "lastOpenFiles": [
+    "基础知识/数据结构/栈的基本操作.md",
+    "基础知识/数据结构/各种树/基础二叉树.md",
+    "基础知识/数据结构/各种树/红黑树（平衡二叉树的实现）.md",
+    "基础知识/数据结构/各种树/二叉查找树.md",
+    "基础知识/数据结构/各种树/树.md",
+    "Leetcode/哈希表/2022-11-02 理论知识（hash table）.md",
+    "基础知识/杂七杂八/关于map容器key值重复.md",
+    "基础知识/杂七杂八/虚基类.md",
+    "基础知识/杂七杂八/虚函数.md",
+    "基础知识/杂七杂八/联合体union.md"
+  ]
+}
