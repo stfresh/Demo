@@ -89,7 +89,7 @@ int main(void)
 ```
 
 上面代码中，只有定义DEBUG宏时，才会输出相加过程，我们可以在[gcc](https://so.csdn.net/so/search?q=gcc&spm=1001.2101.3001.7020)编译时用-D选项定义DEBUG宏来打开这个调试开关，输出调试信息
-	gcc -D DEBUG test.c
+	gcc test.c -o test -D DEBUG 
 
 ## 三、命名空间
 参考reference

@@ -1,0 +1,144 @@
+{
+  "main": {
+    "id": "484915d9ff0147d7",
+    "type": "split",
+    "children": [
+      {
+        "id": "c5b3f95d7e409430",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "概念及知识点/严格反馈和纯反馈.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ecef5d3cfc06f158",
+    "type": "split",
+    "children": [
+      {
+        "id": "5dd58e45a76d33d1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "652f656df452f3ab",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "bf8469a69b456760",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e713c9af1572ca0f",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "bb65992bc4ed0098",
+    "type": "split",
+    "children": [
+      {
+        "id": "bfe697c0993bf334",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ad2338d328bf8b6d",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "概念及知识点/严格反馈和纯反馈.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "db6cc996e3007ae1",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "概念及知识点/严格反馈和纯反馈.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "05b23e6d19790109",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "e2ec76ca144164f2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "概念及知识点/严格反馈和纯反馈.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "c5b3f95d7e409430",
+  "lastOpenFiles": [
+    "概念及知识点/自适应神经网络控制中权值的收敛证明.md",
+    "概念及知识点/自适应神经网络.md",
+    "概念及知识点/自触发.md",
+    "概念及知识点/Zeno现象.md",
+    "概念及知识点/RBF神经网络模型及算法.md",
+    "概念及知识点/持续激励条件.md",
+    "概念及知识点/运动学和动力学.md",
+    "概念及知识点/Back stepping.md",
+    "概念及知识点/非因果关系问题.md",
+    "概念及知识点/严格反馈和纯反馈.md"
+  ]
+}
