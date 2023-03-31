@@ -1,2 +1,1 @@
-hello world
-hello CH
+旨在添加我的笔记
