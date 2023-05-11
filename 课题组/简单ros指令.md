@@ -1,4 +1,4 @@
-## 1.话题消息
+ ## 1.话题消息
 	 rostopic list
 
 	rostopic type [topic]
@@ -6,6 +6,10 @@
 	rosmsg show [msg]  :rosmsg show geometry_msgs/Twist
 
 	rostopic type /turtle1/cmd_vel | rosmsg show 结合查看话题和消息类型
+
+	rosmsg info geometry_msgs/Twist  //显示具体数据格式，变量
+
+	rostopic echo /话题  //打印该话题发布的消息
 
 ### 查看节点（就是可执行文件）、话题、消息关系（rqt_graph）
 

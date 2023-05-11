@@ -11,8 +11,12 @@
             "id": "33960f1eeec1773d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Git简单使用.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -60,6 +64,14 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "ae204094846cb67c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ]
       }
@@ -81,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Git简单使用.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Git简单使用.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Git简单使用.md"
+              }
             }
           }
         ],
@@ -141,6 +157,7 @@
   },
   "active": "33960f1eeec1773d",
   "lastOpenFiles": [
+    "Git简单使用.md",
     "Linxu-Ubuntu/mmap 和常规文件操作的区别.md",
     "Linxu-Ubuntu/遇到的问题.md",
     "Leetcode/九、动态规划/编辑距离/2023-03-20 不同的子序列.md",
@@ -179,7 +196,6 @@
     "Leetcode/九、动态规划/打家劫舍",
     "Leetcode/九、动态规划/基本问题/动态规划理论基础.md",
     "Leetcode/九、动态规划/基本问题/2023-02-20 整数拆分.md",
-    "Leetcode/九、动态规划/基本问题/2023-01-16 不同路径.md",
     "Leetcode/九、动态规划/基本问题",
     "Photo/Pasted image 20230305143713.png",
     "Leetcode/九、动态规划/背包问题/总结",

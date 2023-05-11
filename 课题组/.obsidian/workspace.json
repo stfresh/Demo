@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "992f15665799a599",
+            "id": "9568b4cd777f9cd3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "简单ros指令.md",
+                "file": "机器人.md",
                 "mode": "source",
                 "source": false
               }
@@ -64,12 +64,20 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "8a3a62bfff421cd8",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 205.5
   },
   "right": {
     "id": "bb65992bc4ed0098",
@@ -85,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "简单ros指令.md",
+                "file": "机器人.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -102,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "简单ros指令.md",
+                "file": "机器人.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "简单ros指令.md"
+                "file": "机器人.md"
               }
             }
           }
@@ -147,15 +155,36 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "652f656df452f3ab",
+  "active": "9568b4cd777f9cd3",
   "lastOpenFiles": [
-    "Photo/Pasted image 20230330204559.png",
-    "遥操作.md",
-    "机器人.md",
     "简单ros指令.md",
+    "遥操作.md",
     "杂记.md",
-    "Photo/Pasted image 20230329173952.png",
     "字体颜色.md",
+    "工作记录/2023-05-10 实现双机联动.md",
+    "机器人.md",
+    "Photo/Pasted image 20230511212755.png",
+    "工作记录/2023-04-22 matlab、ROS建立通信并控制Rviz机械臂.md",
+    "工作记录/2023-04-23 在Rviz中持续控制机械臂.md",
+    "Photo/Pasted image 20230511165724.png",
+    "工作记录/2023-04-26 逆运动学第四次实验(成功).md",
+    "工作记录/2023-04-21 机械臂运动学matlab计算.md",
+    "Photo/Pasted image 20230510100542.png",
+    "工作记录/2023-04-26 逆运动学第三次实验（半失败，位置能对，姿态有时候对，有时候错）.md",
+    "Photo/Pasted image 20230426202712.png",
+    "Photo/Pasted image 20230426202234.png",
+    "Photo/Pasted image 20230426202137.png",
+    "工作记录/2023-04-25逆运动学第一次实验（失败，位置行 姿态不行）.md",
+    "Photo/Pasted image 20230426200943.png",
+    "工作记录/2023-04-25逆运动学第二次实验（失败，姿态和位置都错）.md",
+    "Photo/Pasted image 20230426195913.png",
+    "Photo/Pasted image 20230426195409.png",
+    "Photo/Pasted image 20230426194958.png",
+    "工作记录/2023-04-24 rpy、eul角.md",
+    "Gluon的DH参数表建立（改进型）.md",
+    "工作记录/未命名.md",
+    "工作记录.md",
+    "工作记录",
     "概念及知识点/非因果关系问题.md",
     "概念及知识点/确定学习.md",
     "概念及知识点/线性时变系统的指数稳定性.md",
@@ -163,25 +192,6 @@
     "概念及知识点/镇定控制.md",
     "概念及知识点/自触发.md",
     "概念及知识点/自适应神经网络控制中权值的收敛证明.md",
-    "概念及知识点/Back stepping.md",
-    "概念及知识点/RBF神经网络模型及算法.md",
-    "概念及知识点/Zeno现象.md",
-    "概念及知识点/自适应神经网络.md",
-    "概念及知识点/时间触发.md",
-    "概念及知识点/滑模控制.md",
-    "概念及知识点/持续激励条件.md",
-    "无源理论.md",
-    "散射理论及波变量.md",
-    "Photo/Pasted image 20230312211817.png",
-    "Photo/Pasted image 20230312093017.png",
-    "Photo/Pasted image 20230311150407.png",
-    "Photo/Pasted image 20230311150417.png",
-    "Photo/Pasted image 20230308212143.png",
-    "Photo/Pasted image 20230308211744.png",
-    "Photo/Pasted image 20230308204402.png",
-    "Photo/Pasted image 20230308204205.png",
-    "Photo/Pasted image 20230305204732.png",
-    "photo.md",
-    "未命名"
+    "概念及知识点/Back stepping.md"
   ]
 }
