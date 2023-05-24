@@ -1,0 +1,8 @@
+prefix=/home/huic/workspace/install
+
+Name: demo03_static_tf
+Description: Description of demo03_static_tf
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,2 @@
+omni_common:omni_description:omni_msgs
+-DCATKIN_DEVEL_PREFIX=/home/huic/ws/devel -DCMAKE_INSTALL_PREFIX=/home/huic/ws/install -G Unix Makefiles

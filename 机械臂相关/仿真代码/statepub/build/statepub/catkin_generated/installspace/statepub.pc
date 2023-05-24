@@ -1,0 +1,8 @@
+prefix=/home/huic/statepub/install
+
+Name: statepub
+Description: Description of statepub
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

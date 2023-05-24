@@ -1,0 +1,26 @@
+digraph G {
+node [shape=box];
+"dummy" [label="dummy"];
+"base_link" [label="base_link"];
+"1_Link" [label="1_Link"];
+"2_Link" [label="2_Link"];
+"3_Link" [label="3_Link"];
+"4_Link" [label="4_Link"];
+"5_Link" [label="5_Link"];
+"6_Link" [label="6_Link"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"dummy" -> "dummy_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"dummy_joint" -> "base_link"
+"base_link" -> "axis_joint_1" [label="xyz: -2.4327e-05 2.2695e-05 0.105 \nrpy: 0 -0 0"]
+"axis_joint_1" -> "1_Link"
+"1_Link" -> "axis_joint_2" [label="xyz: 0.080113 -2.2695e-05 0 \nrpy: 0 -0 0"]
+"axis_joint_2" -> "2_Link"
+"2_Link" -> "axis_joint_3" [label="xyz: 0 0 0.17447 \nrpy: 0 -0 0"]
+"axis_joint_3" -> "3_Link"
+"3_Link" -> "axis_joint_4" [label="xyz: -0.084516 0 0.17442 \nrpy: 0 -0 0"]
+"axis_joint_4" -> "4_Link"
+"4_Link" -> "axis_joint_5" [label="xyz: 0.080113 2.2695e-05 0 \nrpy: 0 -0 0"]
+"axis_joint_5" -> "5_Link"
+"5_Link" -> "axis_joint_6" [label="xyz: 0 -4.5391e-05 0.080089 \nrpy: 0 -0 0"]
+"axis_joint_6" -> "6_Link"
+}

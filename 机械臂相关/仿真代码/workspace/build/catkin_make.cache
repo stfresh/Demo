@@ -1,0 +1,2 @@
+demo02_urdf:demo03_static_tf:demo_01
+-DCATKIN_DEVEL_PREFIX=/home/huic/workspace/devel -DCMAKE_INSTALL_PREFIX=/home/huic/workspace/install -G Unix Makefiles

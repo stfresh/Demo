@@ -1,0 +1,2 @@
+statepub
+-DCATKIN_DEVEL_PREFIX=/home/huic/statepub/devel -DCMAKE_INSTALL_PREFIX=/home/huic/statepub/install -G Unix Makefiles
