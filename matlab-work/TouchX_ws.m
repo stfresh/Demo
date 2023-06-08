@@ -2,7 +2,7 @@
 %包括可视化和点云图
 %using Robotics Toolbox 10.3.1
 clc;
-clear;
+% clear;
 %建立连杆   theta d a alpah
 L(1)=Link([0,0,0,0],'modified');
 L(2)=Link([0,0,0,pi/2],'modified');
@@ -23,13 +23,21 @@ touchX = SerialLink([L(1),L(2),L(3),L(4),L(5),L(6)],'name','touchX01');
 % touchX.plot([0,0,0,0,0,0]);
 % hold on;
 
-%6个关节角的限制设置
+%6个关节角的限制设置   这个是参考网上文件的
+% theta1min=-0.98;theta1max=0.98;
+% theta2min=0;theta2max=1.78;
+% theta3min=-0.81;theta3max=1.25;
+% theta4min=-2.35;theta4max=2.53;
+% theta5min=-0.5;theta5max=1.75;
+% theta6min=-2.58;theta6max=2.58;
+
+%这个是自己实物测试的，选定仿真角度大于测试角度，确保实际的角度都在仿真里面
 theta1min=-0.98;theta1max=0.98;
-theta2min=0;theta2max=1.78;
-theta3min=-0.81;theta3max=1.25;
+theta2min=-0.02;theta2max=1.78;
+theta3min=-0.1;theta3max=1.25;
 theta4min=-2.35;theta4max=2.53;
 theta5min=-0.5;theta5max=1.75;
-theta6min=-2.58;theta6max=2.58;
+theta6min=-2.78;theta6max=2.78;
 
 %设置随机次数
 n = 50000;

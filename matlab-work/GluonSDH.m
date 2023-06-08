@@ -1,5 +1,5 @@
-clc;
-clear;
+% clc;
+% clear;
 %建立连杆   theta d a alpah   d6=0.04436;先设成0
 L(1)=Link([0,0.1205,0,pi/2],'standard');
 L(2)=Link([0,0,-0.2035,0],'standard');

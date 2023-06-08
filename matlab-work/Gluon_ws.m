@@ -96,11 +96,24 @@ Zsmax = max(Zs);
 Zsmin = min(Zs);
 
 subplot(2,2,1);
-plot3(Xs,Ys,Zs,'b.','MarkerSize',0.5);
-grid on;
+% plot3(Xs,Ys,Zs,'b.','MarkerSize',0.5);
+% grid on;
+% xlabel('x轴(meter)','color','k');
+% ylabel('y轴(meter)','color','k');
+% zlabel('z轴(meter)','color','k');
+% 
+%--------------------------------------------------------用来画3D包络图的
+view(3)		% 设置默认三维视图
+% convhulln函数就是算凸包的，得到的是凸包的坐标们
+A=[Xs,Ys,Zs];
+f = convhulln(A);
+% patch函数，将坐标点连成面，形成包络体
+patch('vertices',A,'faces',f,'facecolor','r')
+% axis equal
 xlabel('x轴(meter)','color','k');
 ylabel('y轴(meter)','color','k');
 zlabel('z轴(meter)','color','k');
+%--------------------------------------------------------------------------------------
 
 subplot(2,2,2);
 plot(Xs,Ys,'b.','MarkerSize',0.5);
@@ -119,6 +132,8 @@ plot(Ys,Zs,'b.','MarkerSize',0.5);
 grid on;
 xlabel('y轴','color','k');
 ylabel('z轴','color','k');
+
+
 
 % xlabel('x轴(meter)','color','k','fontsize',15);
 % ylabel('y轴(meter)','color','k','fontsize',15);
