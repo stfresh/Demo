@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.28)  2 JUN 2024 20:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.4.28)  22 JUN 2024 11:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -300,91 +300,89 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 <basic_wave.jpg, id=1, 4017.0075pt x 1120.185pt>
 File: basic_wave.jpg Graphic file (type jpg)
 <use basic_wave.jpg>
-Package pdftex.def Info: basic_wave.jpg  used on input line 444.
+Package pdftex.def Info: basic_wave.jpg  used on input line 448.
 (pdftex.def)             Requested size: 256.0272pt x 91.03531pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [1{d:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{d:/texlive/2024/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 453.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 457.
  (d:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 453.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 457.
  (d:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 <2019.jpg, id=11, 3095.565pt x 1035.87pt>
 File: 2019.jpg Graphic file (type jpg)
 <use 2019.jpg>
-Package pdftex.def Info: 2019.jpg  used on input line 484.
+Package pdftex.def Info: 2019.jpg  used on input line 491.
 (pdftex.def)             Requested size: 256.058pt x 91.04303pt.
 <novel.jpg, id=12, 3890.535pt x 1108.14pt>
 File: novel.jpg Graphic file (type jpg)
 <use novel.jpg>
-Package pdftex.def Info: novel.jpg  used on input line 527.
+Package pdftex.def Info: novel.jpg  used on input line 535.
 (pdftex.def)             Requested size: 256.03998pt x 91.03716pt.
  [2 <./basic_wave.jpg> <./2019.jpg> <./novel.jpg>]
 <over_schemal.jpg, id=21, 3679.7475pt x 945.5325pt>
 File: over_schemal.jpg Graphic file (type jpg)
 <use over_schemal.jpg>
-Package pdftex.def Info: over_schemal.jpg  used on input line 587.
+Package pdftex.def Info: over_schemal.jpg  used on input line 597.
 (pdftex.def)             Requested size: 267.4346pt x 96.73735pt.
 <S.jpg, id=22, 3513.125pt x 2634.84375pt>
 File: S.jpg Graphic file (type jpg)
 <use S.jpg>
-Package pdftex.def Info: S.jpg  used on input line 647.
-(pdftex.def)             Requested size: 204.82816pt x 133.71992pt.
+Package pdftex.def Info: S.jpg  used on input line 659.
+(pdftex.def)             Requested size: 210.51038pt x 139.38875pt.
 <with compensation.jpg, id=23, 4119.39pt x 1324.95pt>
 File: with compensation.jpg Graphic file (type jpg)
 <use with compensation.jpg>
-Package pdftex.def Info: with compensation.jpg  used on input line 665.
+Package pdftex.def Info: with compensation.jpg  used on input line 677.
 (pdftex.def)             Requested size: 258.90695pt x 99.56912pt.
  [3 <./over_schemal.jpg> <./S.jpg> <./with compensation.jpg>]
 <2019Position_constant.jpg, id=29, 3513.125pt x 2634.84375pt>
 File: 2019Position_constant.jpg Graphic file (type jpg)
 <use 2019Position_constant.jpg>
-Package pdftex.def Info: 2019Position_constant.jpg  used on input line 956.
-(pdftex.def)             Requested size: 189.12378pt x 141.84122pt.
+Package pdftex.def Info: 2019Position_constant.jpg  used on input line 979.
+(pdftex.def)             Requested size: 186.7311pt x 140.03201pt.
 <novel_position_constant.jpg, id=30, 3513.125pt x 2634.84375pt>
 File: novel_position_constant.jpg Graphic file (type jpg)
 <use novel_position_constant.jpg>
-Package pdftex.def Info: novel_position_constant.jpg  used on input line 963.
-(pdftex.def)             Requested size: 189.12378pt x 141.84122pt.
-<2019force_constant.jpg, id=31, 3513.125pt x 2634.84375pt>
+Package pdftex.def Info: novel_position_constant.jpg  used on input line 986.
+(pdftex.def)             Requested size: 186.7311pt x 140.03201pt.
+ [4]
+<2019force_constant.jpg, id=38, 3513.125pt x 2634.84375pt>
 File: 2019force_constant.jpg Graphic file (type jpg)
 <use 2019force_constant.jpg>
-Package pdftex.def Info: 2019force_constant.jpg  used on input line 992.
-(pdftex.def)             Requested size: 189.12378pt x 141.84122pt.
-<novel_force_constant.jpg, id=32, 3513.125pt x 2634.84375pt>
+Package pdftex.def Info: 2019force_constant.jpg  used on input line 1015.
+(pdftex.def)             Requested size: 186.7311pt x 140.03201pt.
+<novel_force_constant.jpg, id=39, 3513.125pt x 2634.84375pt>
 File: novel_force_constant.jpg Graphic file (type jpg)
 <use novel_force_constant.jpg>
-Package pdftex.def Info: novel_force_constant.jpg  used on input line 999.
-(pdftex.def)             Requested size: 189.12378pt x 141.84122pt.
-<2019_position_varying_time.jpg, id=33, 3513.125pt x 2634.84375pt>
+Package pdftex.def Info: novel_force_constant.jpg  used on input line 1022.
+(pdftex.def)             Requested size: 186.7311pt x 140.03201pt.
+<2019_position_varying_time.jpg, id=40, 3513.125pt x 2634.84375pt>
 File: 2019_position_varying_time.jpg Graphic file (type jpg)
 <use 2019_position_varying_time.jpg>
-Package pdftex.def Info: 2019_position_varying_time.jpg  used on input line 1024.
-(pdftex.def)             Requested size: 189.12378pt x 141.84122pt.
-<nove_position_varying_time.jpg, id=34, 3513.125pt x 2634.84375pt>
+Package pdftex.def Info: 2019_position_varying_time.jpg  used on input line 1039.
+(pdftex.def)             Requested size: 186.7311pt x 140.03201pt.
+<nove_position_varying_time.jpg, id=41, 3513.125pt x 2634.84375pt>
 File: nove_position_varying_time.jpg Graphic file (type jpg)
 <use nove_position_varying_time.jpg>
-Package pdftex.def Info: nove_position_varying_time.jpg  used on input line 1031.
-(pdftex.def)             Requested size: 189.12378pt x 141.84122pt.
-<with_compensation.jpg, id=35, 3513.125pt x 2634.84375pt>
+Package pdftex.def Info: nove_position_varying_time.jpg  used on input line 1046.
+(pdftex.def)             Requested size: 186.7311pt x 140.03201pt.
+<with_compensation.jpg, id=42, 3513.125pt x 2634.84375pt>
 File: with_compensation.jpg Graphic file (type jpg)
 <use with_compensation.jpg>
-Package pdftex.def Info: with_compensation.jpg  used on input line 1054.
-(pdftex.def)             Requested size: 189.0pt x 141.7206pt.
-<varying_time.jpg, id=36, 3513.125pt x 2634.84375pt>
+Package pdftex.def Info: with_compensation.jpg  used on input line 1069.
+(pdftex.def)             Requested size: 183.95892pt x 137.94138pt.
+<varying_time.jpg, id=43, 3513.125pt x 2634.84375pt>
 File: varying_time.jpg Graphic file (type jpg)
 <use varying_time.jpg>
-Package pdftex.def Info: varying_time.jpg  used on input line 1060.
-(pdftex.def)             Requested size: 201.60077pt x 151.16864pt.
- [4] [5 <./2019Position_constant.jpg> <./novel_position_constant.jpg> <./2019force_constant.jpg> <./novel_force_constant.jpg> <./2019_position_varying_time.jpg> <./nove_position_varying_time.jpg> <./with_compensation.jpg>]
+Package pdftex.def Info: varying_time.jpg  used on input line 1075.
+(pdftex.def)             Requested size: 199.07831pt x 149.27904pt.
+ [5 <./2019Position_constant.jpg> <./novel_position_constant.jpg> <./2019force_constant.jpg> <./novel_force_constant.jpg> <./2019_position_varying_time.jpg> <./nove_position_varying_time.jpg>]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -396,7 +394,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[6 <./varying_time.jpg>] (./CAC.aux)
+[6 <./with_compensation.jpg> <./varying_time.jpg>] (./CAC.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -405,13 +403,13 @@ L3 programming layer <2024-02-20>
 Here is how much of TeX's memory you used:
  4572 strings out of 474115
  71233 string characters out of 5747696
- 1955190 words of memory out of 5000000
+ 1953190 words of memory out of 5000000
  26890 multiletter control sequences out of 15000+600000
  595095 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,11n,65p,557b,330s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,11n,65p,557b,334s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><d:/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on CAC.pdf (6 pages, 5069421 bytes).
+Output written on CAC.pdf (6 pages, 5070232 bytes).
 PDF statistics:
  113 PDF objects out of 1000 (max. 8388607)
  60 compressed objects within 1 object stream

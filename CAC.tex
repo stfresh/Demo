@@ -354,20 +354,21 @@
 
 \begin{abstract}
     % Time delay is one of the most important issues in teleoperation system.
-    It is well known that one of the most important issues in teleoperation systems is the communication delay,
+    It is widely acknowledged that communication delay 
+    is a critical concern within teleoperation system,
     which significantly affects the stability of the system.
     % Wave variable method based on passivity guarantees the stability of teleoperation system,
     % but the resulting wave reflection seriously distorts the operator,
-    The stability of the teleoperation system 
+    With regard to the stability of the teleoperation system it
     can be guaranteed by using a passivity based wave variable approach,
     but wave reflection may occur, which can seriously distort the operator,
-    and serious position drift occurs when the communication delay is time varying.
-    In this paper,
-    a novel wave variable approach is proposed to 
-    improve the transparency of the bilateral teleoperation system
-    and an energy reservoir is designed to compensate the forward wave.
-    In conclusion, simulation results show that 
-    the proposed scheme guarantees the stability of 
+    and serious position drift occurs when the communication delay varies over time.
+    Considering the above issues,this paper proposes an novel wave variable approach 
+    aimed at improving transparency of 
+    the system.Moreover,
+    an energy reservoir is designed to compensate the forward wave.
+    In conclusion, simulation results demonstrate that 
+    the proposed approach guarantees the stability of 
     the teleoperation system while the transparency of the system is obviously improved.
 \end{abstract}
 
@@ -376,39 +377,40 @@
 \end{IEEEkeywords}
 
 \section{Introduction}
-In a bilateral teleoperation system, 
-the operator operates the master device, and through the communication channel, 
-the slave devices are able to follow the signals from the master while interacting with the external environment.
+For a typical bilateral teleoperation system, 
+operators operate the master device and supported
+by the transmission of communication channel, 
+the slave device is able to follow the signals from the master while interacting with the external environment.
 The appearance of teleoperation has brought new ideas
 for replacing human operators in unknown and complex environments,
 and as one of the core fields of robotics,
 it is now widely used in marine, medical,
 nuclear industries and so on \cite{b1},\cite{b2}.
 However,
-teleoperation system is very sensitive to time delay caused by the communication channel,
-which may deteriorate the transparency of the teleoperation system 
-and even lead to the instability of the whole system\cite{b3}.
+teleoperation system is highly susceptible to the time delay caused by communication channel,
+which may deteriorate the transparency of teleoperation system 
+and even result in the instability of the whole system\cite{b3}.
 \par Over the past decades, 
 researchers have come up with a number of innovative and effective solutions
-to improve the stability and transparency of teleoperation system,
+to cope with the two important issues of stability and transparency,
 such as ``move and wait'' strategy\cite{b4}, adaptive control and
-wave variable approach, of which the wave variable approach is theoretically based on the fact that passivity\cite{b5}.
+wave variable approach, of which wave variable approach was
+developed from the theory of passivity\cite{b5}.
 However, using the basic wave variable approach will result in wave reflections,
 which can lead to the decreasing  of system transparency.
 In\cite{b6},damping elements were used to match the impedance of 
 the master and slave to reduce wave reflection.
-In order to reduce the influence of the unknown environment 
-on the teleoperation system, 
+In order to mitigate the impact of the unknown environment, 
 a approach to adjust the structure of the basic wave variable 
-by removing the velocity term in the backward channel has been proposed\cite{b7}.
+by discarding the velocity term in backward channel has been proposed\cite{b7}.
 In order to guarantee the passivity of the whole teleoperation system 
 and to eliminate distortions, a low-pass filter is designed 
 and compensated for the slave side of the basic wave variable architecture in\cite{b8}.
 A simpler wave variable structure was proposed and can
 be adjusted to satisfy different transparency requirements by tuning two parameters\cite{b9}.
-Subsequently, an improved four-channel control design based on the wave variable method 
+Subsequently, an improved four-channel control design based on wave variable approach 
 was proposed, which designed a passive based time delay compensator to reduce wave reflections, 
-thus further improving the stability and transparency of teleoperation system\cite{b10}.
+thus both the stability and transparency has been further improved. \cite{b10}.
 To cope with the time delay problem a modified wave variable approach was proposed,
 which effectively reduces the position and force tracking errors while guaranteeing stability\cite{b11}.
 In \cite{b12},a compensator based on wave variable
@@ -416,22 +418,24 @@ on a one degree of freedom experimental platform was designed,
 which effectively compensates for the effects of time delay.
 However,the methods mentioned above either do not take wave reflection into account
 or assume that the delay is constant,
-both of which can deteriorate transparency of the teleoperation system
-or even lead to instability.
+both of which can deteriorate transparency of teleoperation system
+or even result in instability.
 \par This paper is dedicated to solving these problems mentioned 
 above to improve the transparency of teleoperation system.
-Under the condition of guaranteeing the stability of the teleoperation system,
+Under the condition of guaranteeing stability of teleoperation system,
 first of all, the circulating wave reflection is reduced 
 by removing the force term present in the forward wave. 
-Subsequently, in order to solve the problem of position drift under time-varying delay,
-a compensation term is added to the forward wave at the slave side 
-based on the position error between the master and slave.
-\par The rest of this paper is organized as follows:
-Section \uppercase\expandafter{\romannumeral2} introduces the wave variable and associated knowledge.
+Subsequently, to cope with the issue of position drift under time varying delay,
+an additional compensation term is incorporated to the forward wave at the slave side, 
+which is designed for the position error between master side and slave side.
+\par The subsequent sections of this paper are structured as follows:
+Section \uppercase\expandafter{\romannumeral2} describes the wave variable approach and associated knowledge.
 The teleoperation control system is designed based on the novel proposed wave variable approach
-with position compensation, and the stability and transparency of the system are analyzed 
-in Section \uppercase\expandafter{\romannumeral3},which is
-followed by the simulation verification of the proposed scheme in Section \uppercase\expandafter{\romannumeral4}.
+with position compensation, which accompanied by 
+the stability and transparency analysis of the system
+in Section \uppercase\expandafter{\romannumeral3}.
+In Section \uppercase\expandafter{\romannumeral4},
+the proposed scheme is demonstrated through simulation.
 Finally, Section \uppercase\expandafter{\romannumeral5} summarizes the findings and provides concluding remarks.
 
 % This document is a model and instructions for \LaTeX.
@@ -447,9 +451,9 @@ Finally, Section \uppercase\expandafter{\romannumeral5} summarizes the findings 
 \end{figure}
 
 A formula similar in concept to the scattering formula appears in\cite{b13},
-the so-called wave variable formualtion,which was developed to solve the problem of
+the so-called wave variable formualtion,which was proposed to solve the problem of
 teleoperation system instability due to time  delay.
-As seen in Fig.~\ref{fig1},
+As shown in Fig.~\ref{fig1},
 instead of transmitting the power variables  $\dot x_m$ and $\dot F_m$,
 wave variables  $u_m$ and $v_s$ are transmitted,
 which are given by:
@@ -460,22 +464,25 @@ which are given by:
     v_s = \frac{F_s - b \dot x_{sd}}{\sqrt{2b}}\label{eq2}
 \end{equation}
 where $u_s$ and $v_m$ are the received signal
-and the reference signal on both side of the channel, which are derived as
+and the reference signal on either 
+side of the communication channel respectively
+, which are derived as
 :
 \begin{equation}
-    \dot x_{sd}=\frac{F_m(t-T)}{b}-\frac{F_s(T)}{b}+\dot x_m(t-T)\label{eq3}
+    \dot x_{sd}=\frac{1}{b}\left[F_m(t-T)-F_s(T)\right]+\dot x_m(t-T)\label{eq3}
 \end{equation}
 \begin{equation}
-    F_{m}=b\dot x_m(t)-b\dot x_{sd}(t-T)+F_s(t-T)\label{eq4}
+    F_{m}=b\left[\dot x_m(t)-\dot x_{sd}(t-T)\right]+F_s(t-T)\label{eq4}
 \end{equation}
 
-The fundamental tuning parameter is called wave impedance $b$,
-which allows the designer to trade off the effective mass and
-stiffness of the system characteristics.
+Where $b$ is called wave impedance,which is a fundamental tuning parameter.
+The characteristics of the system can be changed
+by choosing appropriate $b$, including the effective mass and the
+stiffness.
 
-\par Although the basic wave variable guarantees the passivity of the system\cite{b14},
+\par Although basic wave variable approach guarantees the passivity of the system\cite{b14},
 according to \eqref{eq3} and \eqref{eq4},
-the first two terms on the right-hand side of the equations are bias terms, which cause position drift.
+the two preceding terms on the right-hand side of the equations are bias terms, which cause position drift.
 In addition, wave reflection occurs when $b$ is not selected correctly\cite{b7},
 which will lead to disorientation of human operators using the teleoperation system.
 
@@ -487,9 +494,9 @@ which will lead to disorientation of human operators using the teleoperation sys
 \end{figure}
 
 As mentioned above,
-the basic wave variable approach loses performance to ensure the stability of the system.
+the basic wave variable approach loses performance to maintain  the stability of the system.
 As shown in  Fig.~\ref{fig2},
-a modified wave variable approach was proposed in \cite{b11} to cope with the time delay.
+a modified wave variable approach was proposed in \cite{b11} to solve the time delay problem.
 The outgoing wave variables can be adjusted to improve transient performance with two parameters,
 as follows:
 \begin{equation}
@@ -498,17 +505,18 @@ as follows:
 \begin{equation}
     v_s = -aF_s + b \dot x_{sd}\label{eq6}
 \end{equation}
-In addition, the reference signals on both sides of the channel 
-are changed compared to the basic wave variable,
+In addition, the reference signal on either 
+side of the communication channel 
+is changed compared to the basic wave variable approach,
 which are defined as follows:
 \begin{equation}
-    \dot x_{sd}=\frac{F_m(t-T)}{b}-\frac{F_s(T)}{b}+\dot x_m(t-T)\label{eqA}
+    \dot x_{sd}=\frac{1}{b}\left[F_m(t-T)-F_s(t)\right]+\dot x_m(t-T)\label{eqA}
 \end{equation}
 \begin{equation}
-    F_{m}=b\dot x_m(t)-\frac{b}{a}\dot x_{sd}(t-T)+F_s(t-T)\label{eqB}
+    F_{m}=b\left[\dot x_m(t)-\frac{\dot x_{sd}(t-T)}{a}\right]+F_s(t-T)\label{eqB}
 \end{equation}
-\par Although the method guarantees the stability
-and improves the transparency of the system,
+\par Although this method guarantees the stability
+and improves transparency of teleoperation system,
 which only considers constant delay 
 and does not take into account position drift due to time-varying delay.
 
@@ -528,7 +536,7 @@ and does not take into account position drift due to time-varying delay.
     \caption{Bilateral teleoperation with novle wave transform}
     \label{fig3}
 \end{figure}
-As shown in Fig.~\ref{fig3},the novel approach alters the architecture of the basic wave variable.
+As seen in Fig.~\ref{fig3},the novel approach alters the architecture of the basic wave variable.
 Besides,the novel outgoing wave variables are as follows:
 \begin{equation}
     u_m = \sqrt{\frac{b}{2}}\dot x_m\label{eq7}
@@ -545,8 +553,8 @@ Besides,the novel outgoing wave variables are as follows:
 \begin{equation}
     {{u}_{s}}=\frac{{{F}_{s}}+b{{{\dot{x}}}_{sd}}}{\sqrt{2b}}\label{eq10}
 \end{equation}
-\par If the time delay is $T$, the delay model
-of the transmitted wave variables through the communication channel can be written as:
+\par Define the time delay as $T$, then the
+transmitted wave variables through the communication channel can be written as:
 \begin{equation}
     {u_s}={{u}_{m}}(t-T) \label{eqD}
 \end{equation}
@@ -557,13 +565,15 @@ of the transmitted wave variables through the communication channel can be writt
 
 % \end{equation}
 
-\par Equation \eqref{eq7} indicates that the novel wave variable $u_m$ only contains velocity information 
-and no more force information,
-which means the master outgoing wave variable no longer contains the master incoming wave variable $v_m$.
-Consequently, circulating wave reflections are 
-mitigated by decoupling  velocity and force on the master side.
+\par Equation \eqref{eq7} indicates that the novel wave variable $u_m$ just contains velocity term 
+and no more force term,
+which means the outgoing wave variable $u_m$ no longer 
+contains incoming wave variable $v_m$.
+Consequently, circulating wave reflection is 
+mitigated by separating the velocity term and force term on master side.
 With the newly introduced wave variables,
-the reference signals on both sides of the channel are derived as follows:
+the reference signal on either 
+side of the communication channel can be written as:
 \begin{equation}
     {{{\dot{x}}}_{sd}}=-\frac{{{F}_{s}}}{b}+{{{\dot{x}}}_{m}}(t-T)  \label{eq12}
 \end{equation}
@@ -590,7 +600,7 @@ is also accurate if the master manipulator moves slowly.
 \end{figure}
 \par For the sake of simplicity and fairness of comparison(as shown in Fig.~\ref{fig4}),
 this paper uses a common wave variable based teleoperation control system.
-The dynamics of the master and slave are modeled as follows:
+Considering the dynamics model of the master and slave as follows:
 \begin{equation}
     M_m \ddot x_m(t) = F_h(t)-F_m(t) \label{eqC}
 \end{equation}
@@ -598,23 +608,25 @@ The dynamics of the master and slave are modeled as follows:
     M_s \ddot x_s(t) = F_s(t)-F_e(t) \label{eq14}
 \end{equation}
 \par In addition,
-in order to be able to track the desired velocity signal $x_{sd}$ 
-from the master, the slave uses a PD controller.
+in order to be able to follow the desired velocity signal $x_{sd}$ 
+, the slave uses a PD controller.
 
 \subsection{Stability}
 The wave variable based teleoperation system can
-guarantee the stability of system with constant or unknown communication delay.
+maintain stability of the system with constant or unknown communication delay.
 According to scattering theory\cite{b7},
-When the scattering norm is less than or equal to one i.e.$\left\| S(s) \right\|\le 1$,
+When the scattering norm is not more than or equal to one i.e.$\left\| S(s) \right\|\le 1$,
 the teleoperation system will satisfy passivity, then the system is stable.
-\par The scattering matrix $\left\| S(s) \right\|$ is defined as follows:
+\par The scattering matrix $S(s)$ is defined as follows:
 \begin{equation}
     S(s)=\left[ \begin{matrix}
             1 & 0  \\
             0 & -1 \\
         \end{matrix} \right]\left[ H(s)-I \right]{{\left[ H(s)+I \right]}^{-1}}\label{eq15}
 \end{equation}
-\par The hybrid matrix $(H(s)$ in a teleoperation system, which relates velocity and force, is defined as follows:
+\par Where $H(s)$ is called hybrid matrix in a teleoperation system, 
+which is related to velocity and force can be written as:
+
 \begin{equation}
     \left[ \begin{matrix}
             {{F}_{m}}(s)           \\
@@ -633,18 +645,18 @@ the teleoperation system will satisfy passivity, then the system is stable.
 \end{equation}
 
 \par Defining $s = j\omega$,
-$\omega$ is the angular frequency, which influences the scattering norm through $e^{j\omega T}$.
+$\omega$ is the angular frequency, which influences the $S(s)$ through $e^{j\omega T}$.
 Besides,as $e^{j\omega T}$ is periodic and has a period of $2\pi$,
 then the scattering norm is likewise periodic.
-From equation \eqref{eq17}, it can be seen that the time delay $T$ only affects the
+From equation \eqref{eq17}, it is evident that the time delay $T$ only affects the
 the scattering norm with respect to the magnitude of the period of $\omega$.
 Let $T = 1s$ ,$b=1 \sim 200$,$\omega = 1 \sim 5$ as the only variable.As a result,
-Fig.~\ref{fig5} illustrates that the scattering norm of
-the proposed teleoperation system is coherent not greater than one.
+Fig.~\ref{fig5} illustrates that the scattering norm $\left\| S(s) \right\|$ of
+the designed teleoperation system is coherent not more than one.
 Thus,for any constant delay time,
 the proposed novel teleoperation system is passive and stable .
 \begin{figure}[htbp]
-    \centerline{\includegraphics[height=4.7cm,width=7.2cm]{S.jpg}}
+    \centerline{\includegraphics[height=4.9cm,width=7.4cm]{S.jpg}}
     \caption{Scattering norm of novel teleoperation}
     \label{fig5}
 \end{figure}
@@ -654,12 +666,12 @@ the proposed novel teleoperation system is passive and stable .
 % \item Do not mix complete spellings and abbreviations of units: ``Wb/m\textsuperscript{2}'' or ``webers per square meter'', not ``webers/m\textsuperscript{2}''. Spell out units when they appear in text: ``. . . a few henries'', not ``. . . a few H''.
 % \item Use a zero before decimal points: ``0.25'', not ``.25''. Use ``cm\textsuperscript{3}'', not ``cc''.)
 % \end{itemize}
-\subsection{The Forward Wave Variable Compensation}
+\subsection{Forward Wave Variable Compensation}
 All of the above discussions are for the constant time delay,
-but when the communication delay is variable,
+but if communication delay is variable,
 the teleoperation system may appear the position drift or even instability,
-and the greater the delay, the worse the impact. In order to solve this problem,
-a compensation term is added to the forward wave at the slave side  (as shown in Fig.~\ref{fig6})
+and the greater the delay, the worse the impact. In response to this problem,
+a compensation term is added to the forward wave at the slave side  (as seen in Fig.~\ref{fig6})
 to improve position tracking\cite{b16}.
 \begin{figure}[htbp]
     \centerline{\includegraphics[height=3.5cm,width=9.1cm]{with compensation.jpg}}
@@ -672,21 +684,22 @@ the incoming wave at slave side $u_s$ can be written as:
     {{u}_{s}}={{\hat{u}}_{s}}+\Delta {{u}_{s}}\label{eq18}
 \end{equation}
 \par Additional compensation term inevitably inject energy into the system
-and may destroy the passivity of the whole teleoperation system,
-which can lead to system instability.
-Hence, an energy reservoir based regulator is designed
-to guarantee the passivity of the system,
-where the energy reservoir is used for tracking how much net energy is consumed by the slave system,
+might destroy the passivity of the teleoperation system,
+which can result in system instability.
+Hence, A regulator utilizing energy reservoir
+is designed to maintain the passivity of the system.,
+where the energy reservoir is used for tracking 
+how much net energy is consumed by slave system,
 which is defined as follows:
 \begin{equation}
     {{E}_{r}}(t)={{E}_{r}}(0)+\int_{0}^{t}{(\hat{u}_{s}^{2}-v_{s}^{2})}d\tau\label{eq19}
 \end{equation}
 \par The compensation term is defined as follows:
 \begin{equation}
-    \Delta {{u}_{s}}=\gamma \left[ 1-{{e}^{-\delta {{E}_{r}}(t)}}
+    \Delta {{u}_{s}}=\gamma*\left[ 1-{{e}^{-\delta {{E}_{r}}(t)}}
     \right]*\sqrt{\frac{b}{2}}\left\{ {{x}_{m}}(t-T)-{{x}_{sd}}(t) \right\}\label{eq20}
 \end{equation}
-Where $\delta$,$\gamma$ are positive constants used to adjust the speed of the compensation term.
+Where $\delta$,$\gamma$ are positive constants used for regualting the speed of compensation term.
 The energy reservoir term in brackets guarantees passivity,when $E_r(t) \rightarrow 0$,
 the $\Delta u_s \rightarrow 0$,which means that the compensation is cut off.
 Some of the parameters are given in Table.~\ref{tab1}.
@@ -712,7 +725,7 @@ The control design with compensation is analyzed here.
 Considering approximate steady state,where the $x_m$ and $F_s$ are roughly constant.
 In this case, the transmission delay does not matter,then there is ${{u}_{m}}={{\hat{u}}_{s}},{{v}_{m}}={{v}_{s}}$.
 Besides,it is assumed that the teleoperation system has been running for a long enough time
-to render the energy reservoir large enough to satisfy $1-{{e}^{-\delta {{E}_{r}}(t)}}\approx 1$.
+to render energy reservoir large enough to satisfy $1-{{e}^{-\delta {{E}_{r}}(t)}}\approx 1$.
 \par According to \eqref{eq7} and \eqref{eq9},we have:
 \begin{equation}
     {{u}_{m}}={{\hat{u}}_{s}}=\frac{1}{\sqrt{2b}}
@@ -750,15 +763,15 @@ it is easy to see how \eqref{eq20} enables $x_{sd}$ to asymptotically converge t
 In addition, it is advisable to cap the energy reservoir to be on the safe side.
 However, the cap should not be set too low,
 as the reservoir may be exhausted 
-before the wave variable that on the master side reaches the slave side,
+before the wave variable that at the master side reaches the slave side,
 thus shutting off the compensation term early.
 \par It is worth noting that this compensation method has two strengths.
 First of all, this position compensation scheme does not care about the drift source,
-it only depends on the measured difference between the desired positions of the master and slave.
+it only depends on the measured difference between the desired positions of master and slave.
 Subsequently, 
 even if the positions of the master and slave 
 do not coincide in the initial conditions,
-the compensation term is able to quickly drives the slave's position to the master's, 
+the compensation term is able to quickly drives slave's position to master's, 
 keeping the two synchronized.
 \par On the other hand,when the velocity is slowly time varying  or time-invariant ,
 from \eqref{eq13} we can get accurate or near accurate force tracking.
@@ -898,10 +911,10 @@ from \eqref{eq13} we can get accurate or near accurate force tracking.
 % ``Temperature/K''.
 
 \section{Simulation}
-In this section,we will demonstrate
-the performance of the teleoperation system based on the modified wave variable
-and the teleoperation system based on the novel wave variable(both with and without position compensation)
-will be compared by simulation in different situations,
+The performance of the teleoperation system based on modified wave variable approach
+and the teleoperation system based on novel wave variable approach(both with and without position compensation)
+will demonstrate in this section,which
+will be compared by simulation in two different situations,
 including constant delay and time varying delay.
 
 
@@ -910,9 +923,10 @@ all gain values of the controller remained unchanged.
 The only change in each comparison experiment is the change in the architecture of the wave variable,
 i.e. from basic wave variable to novel wave variable.
 Moreover,
-the human operator is considered as a system consisting of a spring and a damper, 
+human operator in here is considered as a system consisting of a spring and a damper, 
 which in this paper we set to $Z_h=\frac{20s+10}{s}$.
-The reference velocity $x_{md}$ at the master side is set to sine curve $sinx$.
+The desired velocity $x_{md}$ at master side is set to sine curve $sinx$.
+The simulation duration is set to $50s$ for both situations.
 
 \par Situation $1$: The time delay is set to a fixed $200ms$
 and other parameters refer to Table.~\ref{tab1}.
@@ -944,19 +958,28 @@ and other parameters remain the same with Situation $1$.
 %         \label{fig10}%文中引用该图片代号
 %     \end{minipage}
 % \end{figure}
+\par  Fig.~\ref{fig7}(a) and Fig.~\ref{fig7}(b)  illustrate the positional tracking of based on the
+modified wave variable approach and the novel wave variable approach in Situation 1, respectively.
+It can be seen that compared to the use of the modified wave variable approach, 
+because of the reduction of wave reflection,
+the novel wave variable approach proposed in this paper
+has a significant improvement in position tracking under constant time delay.
+In the meantime,
+the force feedback tracking can maintain a good curve,
+as seen in Fig.~\ref{fig8}(a) and Fig.~\ref{fig8}(b). 
 %%%                     position
 \begin{figure}[htbp]
     \centering   %居中放置
     \subfigure[Modified wave variable\cite{b11}] %为每个图片加上编号
     {
-        \begin{minipage}{0.79\linewidth} %表示在该行所占空间的比例为0.3；其中。3=0.3；b为放置方式；
+        \begin{minipage}{0.78\linewidth} %表示在该行所占空间的比例为0.3；其中。3=0.3；b为放置方式；
             \centering
             \includegraphics[width=0.95\linewidth]{2019Position_constant.jpg}
         \end{minipage}
     } \\
     \subfigure[Novel wave variable]
     {
-        \begin{minipage}{0.79\linewidth}
+        \begin{minipage}{0.78\linewidth}
             \centering
             \includegraphics[width=0.95\linewidth]{novel_position_constant.jpg}
         \end{minipage}
@@ -985,14 +1008,14 @@ and other parameters remain the same with Situation $1$.
     \centering   %居中放置
     \subfigure[Modified wave variable\cite{b11}] 
     {
-        \begin{minipage}{0.79\linewidth} 
+        \begin{minipage}{0.78\linewidth} 
             \centering
             \includegraphics[width=0.95\linewidth]{2019force_constant.jpg}
         \end{minipage}
     }  \\
     \subfigure[Novel wave variable]
     {
-        \begin{minipage}{0.79\linewidth}
+        \begin{minipage}{0.78\linewidth}
             \centering
             \includegraphics[width=0.95\linewidth]{novel_force_constant.jpg}
         \end{minipage}
@@ -1001,15 +1024,7 @@ and other parameters remain the same with Situation $1$.
     \label{fig8}
 \end{figure}
 
-\par  Fig.~\ref{fig7}(a) and Fig.~\ref{fig7}(b)  illustrate the positional tracking of based on
-the modified wave variable and based on the novel wave variable in Situation 1, respectively.
-It can be seen that compared to the use of the modified wave variable method, 
-because of the reduction of wave reflection,
-the novel wave variable method proposed in this paper
-has a significant improvement in position tracking under constant time delay.
-At the same time,
-the force feedback tracking also maintains a good curve,
-as shown in Fig.~\ref{fig8}(a) and Fig.~\ref{fig8}(b). 
+
 
 
 
@@ -1017,14 +1032,14 @@ as shown in Fig.~\ref{fig8}(a) and Fig.~\ref{fig8}(b).
     \centering   %居中放置
     \subfigure[Modified wave variable\cite{b11}] %为每个图片加上编号
     {
-        \begin{minipage}{0.79\linewidth} %表示在该行所占空间的比例为0.3；其中。3=0.3；b为放置方式；
+        \begin{minipage}{0.78\linewidth} %表示在该行所占空间的比例为0.3；其中。3=0.3；b为放置方式；
             \centering
             \includegraphics[width=0.95\linewidth]{2019_position_varying_time.jpg}
         \end{minipage}
     } \\
     \subfigure[Novel wave variable]
     {
-        \begin{minipage}{0.79\linewidth}
+        \begin{minipage}{0.78\linewidth}
             \centering
             \includegraphics[width=0.95\linewidth]{nove_position_varying_time.jpg}
         \end{minipage}
@@ -1051,13 +1066,13 @@ as shown in Fig.~\ref{fig8}(a) and Fig.~\ref{fig8}(b).
 % \end{figure}
 
 \begin{figure}[htbp]
-    \centerline{\includegraphics[width=0.75\linewidth]{with_compensation.jpg}}
+    \centerline{\includegraphics[width=0.73\linewidth]{with_compensation.jpg}}
     \caption{Novel wave variable with compensation in Situation 2}
     \label{fig10}
 \end{figure}
 
 \begin{figure}[htbp]
-    \centerline{\includegraphics[width=0.8\linewidth]{varying_time.jpg}}
+    \centerline{\includegraphics[width=0.79\linewidth]{varying_time.jpg}}
     \caption{Time-varying delay}
     \label{fig11}
 \end{figure}
@@ -1065,10 +1080,10 @@ as shown in Fig.~\ref{fig8}(a) and Fig.~\ref{fig8}(b).
 
 
 \par Fig.~\ref{fig9}(a) and Fig.~\ref{fig9}(b) illustrate the positional tracking of based on
-the modified wave variable and based on the novel wave variable
-with time varying delay in Situation 2, respectively.
-It can be seen that
-at some point the position tracking curves of both methods are distorted,
+the modified wave variable approach and the novel wave variable approach
+in Situation 2, respectively.
+It is obvious that
+at some point the position tracking curves of both approachs are distorted,
 and it can be believed that the longer the delay the worse the distortion is.
 However, with the addition of the positional compensation described in Section \uppercase\expandafter{\romannumeral3} ,
 it can be seen that even in Situation 2 the slave is still able to track the master perfectly,
@@ -1078,8 +1093,8 @@ the compensation term at the slave side will render the slave's position
 gradually follow the master's position as time goes by.
 
 \par Eventually,
-the effectiveness of the novel wave variable approach 
-and the position compensation scheme proposed
+the effectiveness of novel wave variable approach 
+and position compensation scheme proposed
 in this paper are verified.
 
 % The preferred spelling of the word ``acknowledgment'' in America is without 
@@ -1095,8 +1110,8 @@ To address position drift due to time varying delay,
 an energy reservoir is designed to compensate the forward wave while guaranteeing the system passivity.
 Detailed theoretical derivations 
 and proofs are given for the stability and transparency of teleoperation system.
-The effectiveness of the proposed schemes are also verified by simulation.
-Simulation results show that the proposed novel wave variable method
+The simulation results also confirm the effectiveness of the proposed scheme,
+which show that the proposed novel wave variable approach
 significantly improves the performance of position tracking
 while maintaining good force feedback tracking under constant time delay condition.
 Besides, the performance of position tracking can be guaranteed by the compensation term
@@ -1143,7 +1158,7 @@ further investigate force feedback tracking based on this paper.
 
     \bibitem{b7} L.~Bate, C.~D. Cook, and Z.~Li, ``Reducing wave-based teleoperator reflections for unknown environments,'' \emph{IEEE Transactions on Industrial Electronics}, vol.~58, no.~2, pp. 392--397, 2009.
 
-    \bibitem{b8} L.Y. Hu, X.~P. Liu, and G.P. Liu, ``The wave-variable teleoperator with improved trajectory tracking,''  \emph{IEEE ICCA}, 2010, pp. 322--327.
+    \bibitem{b8} L.Y. Hu, X.~P. Liu, and G.P. Liu, ``The wave-variable teleoperator with improved trajectory tracking,''  \emph{IEEE ICCA}, pp. 322--327, 2010.
 
     \bibitem{b9} Z.~Chen, F.~Huang, W.~Sun and et~al., ``A novel wave variable based bilateral teleoperation control design for transparency improvement,''  \emph{IEEE International Conference on Information and Automation (ICIA)}, pp. 1--6, 2018.
 
