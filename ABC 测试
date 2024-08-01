@@ -1,1 +1,14 @@
 ceshishagnchuang
+目录	链接	demo代码
+JAVA基础	JAVA编程思想：第四版PDF	
+Hibernate-Validate	https://blog.csdn.net/u011781521/article/details/72510328	
+messages	https://www.baeldung.com/spring-custom-validation-message-source	
+jasyptspringboot	https://www.baeldung.com/spring-boot-jasypt	IAF->Dataloader->Application.java->EncryptablePropertyDetector/EncryptablePropertyResolver/StringEncryptor
+commons-lang3	https://blog.51cto.com/linhongyu/1553329	
+guava	https://ifeve.com/google-guava/	
+commons-io	https://blog.csdn.net/wangyanming123/article/details/80217747	
+commons-collections4	https://www.baeldung.com/apache-commons-collection-utilshttps://www.baeldung.com/apache-commons-setutilshttps://www.baeldung.com/apache-commons-map-utilshttps://commons.apache.org/proper/commons-collections/apidocs/org/apache/commons/collections4/ListUtils.html	
+okhttp3	https://www.jianshu.com/p/da4a806e599b	
+slf4j-api+logback	https://www.jianshu.com/p/696444e1a352	
+Jackson	https://www.jianshu.com/p/f3fc3bf6dd2b	
+powermock/Springboottest/mockit	https://juejin.im/post/5be7eaf26fb9a049d4415278https://www.jianshu.com/p/51930cc5dcf9https://www.baeldung.com/spring-boot-testing	Webscan-service->PortScanTaskControllerTest
