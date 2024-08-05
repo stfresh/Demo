@@ -1,4 +1,4 @@
-ceshishagnchuang
+学习链接：
 目录	链接	demo代码
 JAVA基础	JAVA编程思想：第四版PDF	
 Hibernate-Validate	https://blog.csdn.net/u011781521/article/details/72510328	
@@ -12,3 +12,182 @@ okhttp3	https://www.jianshu.com/p/da4a806e599b
 slf4j-api+logback	https://www.jianshu.com/p/696444e1a352	
 Jackson	https://www.jianshu.com/p/f3fc3bf6dd2b	
 powermock/Springboottest/mockit	https://juejin.im/post/5be7eaf26fb9a049d4415278https://www.jianshu.com/p/51930cc5dcf9https://www.baeldung.com/spring-boot-testing	Webscan-service->PortScanTaskControllerTest
+
+需求：WAF 运维运营平台对接普罗   新普罗运维平台对接
+
+需求描述： WAF 运维运营平台对接普罗：在普罗平台上对接WAF运营运维平台
+
+价值：内部运维优化
+
+场景分析：
+对接新运维平台，集成新功能，提高运维效率，涉及三部分功能：
+1. 安全总览页面
+   当前运维过程中，用户安全总览页面信息需要用户配合才能获取，不利于问题定位，新运维平台支持查询租户安全总览页面信息
+   
+2. 虚拟化集群集群管理
+当前虚拟化集群通过人工手动维护表格，效率低下且容易出错；管理面通过定时器任务维护虚拟化集群信息，并提供运维接口查询对应局点的虚拟化集群信息
+ 
+3. 资源管理
+ 该功能为WAF运维平台已有功能，集成到新运维平台。
+ 
+整体鉴权方式：COA鉴权
+
+可信设计原则应用（可选）
+可信维度|设计原则|落地方式
+可靠可用、 越简单越可靠原则 |内核模块业务逻辑尽量简单，复杂的业务逻辑放在业务模块
+可靠可用 |基于失效设计（Design for Failure）| 基于“不信任”进行设计，充分考虑异常场景的处理、容错及恢复机制，禁止无限重试机制
+可靠可用 |过载控制原则 |系统需要提供过载检测和控制功能，在负载过大的情况下，系统能够正常运行并提供一定的业务处理能力
+
+ 1）运维平台支持安全总览、防护策略、网站设置、防护事件
+    1.1 WAF运维运营平台新增设置客户信息功能，输入待查询客户的domianId projectId  enterpriseProjectId regionId方可查询客户资源详情
+    1.2 参考租户面console界面，移植租户面console安全总览、防护策略、网站设置、防护事件页面至WAF运维运营平台。移除增删改等功能
+，仅支持查看功能， 方便快速查询客户所配置的详情
+    1.3 WAF运维运营平台后台会对接现网的WAF管理面机器，查询安全总览、防护策略、网站设置、防护事件，查询接口沿用租户面相关接口，
+由于对接的是COA鉴权，无法通过token获取必须的用户信息：domainId、projectId以及enterpriseProjectId，
+因此需要前端在调用接口时传过来，参数放到请求头中，对应的Key分别为：Domain-Id、Project-Id以及Enterprise-Project-Id。
+
+2）虚拟化集群管理
+1. 后台定时任务，定时查询刷新虚拟集群信息，定时任务为每天夜里更新一次，新增表:
+CREATE TABLE IF NOT EXISTS `virtual_cluster` (
+    `id` varchar(50) NOT NULL,
+    `cluster_id` varchar(64) NOT NULL,
+    `cluster_name` varchar(256) NOT NULL,
+    `domain_id` varchar(256) NOT NULL,
+    `domain_name` varchar(256) NOT NULL,
+    `create_time` bigint(20) DEFAULT '0',
+    `update_time` bigint(20) DEFAULT '0',
+    `delete_time` bigint(20) DEFAULT '0',
+    PRIMARY KEY (`id`),
+    INDEX idx_cluster_id (`cluster_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ 保存虚拟集群后端实例组信息
+CREATE TABLE IF NOT EXISTS `virtual_cluster_elb` (
+    `id` varchar(50) NOT NULL,
+    `cluster_id` varchar(64) NOT NULL,
+    `elb_id` varchar(64) NOT NULL,
+    `elb_name` varchar(256) NOT NULL,
+    `elb_public_ips`  varchar(512) NOT NULL,
+    `create_time` bigint(20) DEFAULT '0',
+    `update_time` bigint(20) DEFAULT '0',
+    `delete_time` bigint(20) DEFAULT '0',
+    PRIMARY KEY (`id`),
+    INDEX idx_cluster_id (`cluster_id`),
+    INDEX idx_elb_id (`elb_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+保存虚拟集群后端实例信息：
+CREATE TABLE IF NOT EXISTS `virtual_cluster_server` (
+    `id` varchar(50) NOT NULL,
+    `cluster_id` varchar(64) NOT NULL,
+    `server_id` varchar(64) NOT NULL,
+    `server_name` varchar(256) NOT NULL,
+    `server_public_ips`  varchar(512) NOT NULL,
+    `availability_zone`  varchar(32) NOT NULL,
+    `float_ip` varchar(32) NOT NULL,
+    `create_time` bigint(20) DEFAULT '0',
+    `update_time` bigint(20) DEFAULT '0',
+    `delete_time` bigint(20) DEFAULT '0',
+    PRIMARY KEY (`id`),
+    INDEX idx_cluster_id (`cluster_id`),
+    INDEX idx_server_id (`server_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+ 2. 虚拟化集群管理接口：
+2.1 查询虚拟化集群列表接口 
+
+GET /v1/waf/sys/virtual-clusters
+ResposneBody:
+{
+    "total": 1,   // 虚拟集群总数
+    "items" [
+        { 
+            "cluster_id": "xxx-xxx-xx",   //虚拟集群id
+            "cluster_name": xxx-xxx-xx", //虚拟集群名称
+            "domain_name": "op_svc_xxx", // 集群所使用承载租户账号
+            "loadbalancers": [         // 关联的负载均衡器
+                {
+                    "loadbalancer_id": "xxx-xxx-xxx", // 负载均衡器id
+                    "loadbalancer_name": "xxx-xxx-xxx", //负载均衡器名称
+                    "public_ips": [                    // 公网ip
+                        {
+                            "publicip_address": "xx.xx.xx.xx", //IP 地址，入口IP
+                            "ip_version": 4     //IP版本信息。 取值范围：4和6 4：IPv4 6：IPv6
+                        }
+                    ]
+                }
+            ],
+            "update_time": xxxxxxxxxx   // 记录更新时间
+        }
+    ]
+}
+2.2 查询指定虚拟化集群详情接口
+GET /v1/waf/sys/virtual-clusters/{cluster_id}
+ResposneBody:
+
+{ 
+    "cluster_id": "xxx-xxx-xx",   //虚拟集群id
+    "cluster_name": xxx-xxx-xx", //虚拟集群名称
+    "domain_name": "op_svc_xxx" // 集群所使用承载租户账号
+    "loadbalancers": [         // 关联的负载均衡器
+        {
+            "loadbalancer_id": "xxx-xxx-xxx", // 负载均衡器id
+            "loadbalancer_name": "xxx-xxx-xxx", //负载均衡器名称
+            "public_ips": [                    // 公网ip
+                {
+                    "publicip_address": "xx.xx.xx.xx", //IP 地址，入口IP
+                    "ip_version": 4     //IP版本信息。 取值范围：4和6 4：IPv4 6：IPv6
+                }
+            ]
+        }
+    ],
+    "servers": [        // 后端服务器组
+        {
+            "server_id": "xxx-xxx-xxx", // 后端服务器id
+            "server_name": "xxx-xxx-xxx", //后端服务器名称
+            "float_ip": xxx.xxx.xxx.xxx, // 浮动IP
+            "public_ips": [                    // 公网ip
+                {
+                    "publicip_address": "xx.xx.xx.xx", //IP 地址，回源IP
+                    "ip_version": 4     //IP版本信息。 取值范围：4和6 4：IPv4 6：IPv6
+                }
+            ]
+        }
+    ],
+    "update_time": xxxxxxxxxx   // 记录更新时间
+}
+ 2.3 刷新指定虚拟化集群接口
+PUT /v1/waf/sys/virtual-clusters/{cluster_id}
+ResposneBody:
+
+{ 
+    "cluster_id": "xxx-xxx-xx",   //虚拟集群id
+    "cluster_name": xxx-xxx-xx", //虚拟集群名称
+    "domain_name": "op_svc_xxx" // 集群所使用承载租户账号
+    "loadbalancers": [         // 关联的负载均衡器
+        {
+            "loadbalancer_id": "xxx-xxx-xxx", // 负载均衡器id
+            "loadbalancer_name": "xxx-xxx-xxx", //负载均衡器名称
+            "public_ips": [                    // 公网ip
+                {
+                    "publicip_address": "xx.xx.xx.xx", //IP 地址，入口IP
+                    "ip_version": 4     //IP版本信息。 取值范围：4和6 4：IPv4 6：IPv6
+                }
+            ]
+        }
+    ],
+    "servers": [        // 后端服务器组
+        {
+            "server_id": "xxx-xxx-xxx", // 后端服务器id
+            "server_name": "xxx-xxx-xxx", //后端服务器名称
+            "float_ip": xxx.xxx.xxx.xxx, // 浮动IP
+            "public_ips": [                    // 公网ip
+                {
+                    "publicip_address": "xx.xx.xx.xx", //IP 地址，回源IP
+                    "ip_version": 4     //IP版本信息。 取值范围：4和6 4：IPv4 6：IPv6
+                }
+            ]
+        }
+    ],
+    "update_time": xxxxxxxxxx   // 记录更新时间
+}
