@@ -13,6 +13,15 @@ slf4j-api+logback	https://www.jianshu.com/p/696444e1a352
 Jackson	https://www.jianshu.com/p/f3fc3bf6dd2b	
 powermock/Springboottest/mockit	https://juejin.im/post/5be7eaf26fb9a049d4415278https://www.jianshu.com/p/51930cc5dcf9https://www.baeldung.com/spring-boot-testing	Webscan-service->PortScanTaskControllerTest
 
+
+华为云计算公司
+Java后端开发实习生 安全产品服务部
+Web应用防火墙 WAF
+- 参与WAF运维运营平台对接普罗开发，提供运维接口查询对应局点的虚拟化集群信息，并采用Spring Task定时执行查询和更新集群信息；
+- 编写组件单元测试，确保组件各项功能正常和API的可靠性
+
+
+
 需求：WAF 运维运营平台对接普罗   新普罗运维平台对接
 
 需求描述： WAF 运维运营平台对接普罗：在普罗平台上对接WAF运营运维平台
