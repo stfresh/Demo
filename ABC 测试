@@ -13,6 +13,21 @@ slf4j-api+logback	https://www.jianshu.com/p/696444e1a352
 Jackson	https://www.jianshu.com/p/f3fc3bf6dd2b	
 powermock/Springboottest/mockit	https://juejin.im/post/5be7eaf26fb9a049d4415278https://www.jianshu.com/p/51930cc5dcf9https://www.baeldung.com/spring-boot-testing	Webscan-service->PortScanTaskControllerTest
 
+二方件：加解密：crypto
+配置读取：commons-utils
+
+i18n框架：messages
+参数校验：Hibernate-Validate
+
+代码模板：Checkstyle
+缓存框架：guava
+Map/List数组处理：commons-collections4
+Rest请求处理：okhttp3
+日志框架：slf4j -api +logback;
+配置加密：jasyptspringboot
+Tomcat：变量配置 日志查看
+
+
 
 华为云计算公司
 Java后端开发实习生 安全产品服务部
