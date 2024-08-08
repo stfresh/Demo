@@ -17,7 +17,9 @@ powermock/Springboottest/mockit	https://juejin.im/post/5be7eaf26fb9a049d4415278h
 华为云计算公司
 Java后端开发实习生 安全产品服务部
 Web应用防火墙 WAF
-
+项目简介：
+通过过滤和监控 Web 应用与互联网之间的 HTTP(S) 流量，识别并阻断SQL 注入、XSS、CRLF、CC攻击、代码注入、命令注入、恶意爬虫扫描等攻击，保护Web服务安全稳定。
+为客户提供域名防护、防护规则变更以及实时查看防护日志，分析防护事件数据等服务。
 - 协助定位并修复生产环境中的BUG
 - 编写组件单元测试，确保组件各项功能正常和API的可靠性
 - 参与WAF运维运营平台对接普罗开发，提供查询接口并采用Spring Task定时执行查询和更新信息
