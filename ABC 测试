@@ -106,7 +106,7 @@ SRE中间件	CloudDB，Zookeeper，Kafka，Tomcat，Nginx，MySQL	基于CloudBU�
 - （1）创建防护策略
 1、租户在WAF控制台或者通过API创建防护策略，将请求发送到后端WAF-Service服务；
 2、WAF-Service对于请求进行合法性校验，并将防护策略详细信息发送到WAF-Manager服务；
-3、WAF-Manager对策略详情进行合法校验，然后创建策略详情实体对象并保存到数据库；
+3、WAF-Manager对策略详情进行合法校验，然后创建策略详情实体对象并保存到ManagerDB数据库；
 4、WAF-Service对租户的策略概要信息保存到数据库，然后返回请求状态到客户端；
 
 -（2）防护策略同步与下发
